@@ -1,0 +1,717 @@
+autostart = False
+[127.0.0.1:7211]
+    workingdir = working
+    udp = 10000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        disk0 = 20
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER MANALS05]]
+        model = 3640
+        console = 2031
+        aux = 2101
+        cnfg = configs\MANALS05.cfg
+        slot0 = NM-16ESW
+        f0/0 = MANDL3S01 f0/5
+        f0/1 = MANDL3S02 f0/5
+        symbol = ethernet_switch
+        x = 764.616449178
+        y = -79.9827560572
+    [[ROUTER LDNALS05]]
+        model = 3640
+        console = 2036
+        aux = 2100
+        cnfg = configs\LDNALS05.cfg
+        slot0 = NM-16ESW
+        f0/0 = LDNDL3S01 f0/5
+        f0/1 = LDNDL3S02 f0/5
+        symbol = ethernet_switch
+        x = 785.829652613
+        y = 286.298556597
+    [[ROUTER MANALS08]]
+        model = 3640
+        console = 2032
+        aux = 2102
+        cnfg = configs\MANALS08.cfg
+        slot0 = NM-16ESW
+        f0/0 = MANDL3S01 f0/8
+        f0/1 = MANDL3S02 f0/8
+        symbol = ethernet_switch
+        x = 768.859089865
+        y = 7.69848480982
+        hx = -8.92893218814
+        hy = -26.4142135624
+    [[ROUTER LDNALS01]]
+        model = 3640
+        console = 2037
+        aux = 2103
+        cnfg = configs\LDNALS01.cfg
+        slot0 = NM-16ESW
+        f0/0 = LDNDL3S01 f0/1
+        f0/1 = LDNDL3S02 f0/1
+        symbol = ethernet_switch
+        x = 785.829652613
+        y = 205.688383542
+[127.0.0.1:7210]
+    workingdir = working
+    udp = 11000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        disk0 = 20
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER NottsALS05]]
+        model = 3640
+        console = 2028
+        aux = 2107
+        cnfg = configs\NottsALS05.cfg
+        slot0 = NM-16ESW
+        f0/0 = NottsDL3S01 f0/5
+        f0/1 = NottsDL3S02 f0/5
+        symbol = ethernet_switch
+        x = 750.474313554
+        y = -434.950360212
+    [[ROUTER NottsALS08]]
+        model = 3640
+        console = 2029
+        aux = 2104
+        cnfg = configs\NottsALS08.cfg
+        slot0 = NM-16ESW
+        f0/0 = NottsDL3S01 f0/8
+        f0/1 = NottsDL3S02 f0/8
+        symbol = ethernet_switch
+        x = 749.060099992
+        y = -341.612265096
+    [[ROUTER MANALS01]]
+        model = 3640
+        console = 2030
+        aux = 2105
+        cnfg = configs\MANALS01.cfg
+        slot0 = NM-16ESW
+        f0/0 = MANDL3S01 f0/1
+        f0/1 = MANDL3S02 f0/1
+        f0/2 = nio_gen_eth:\device\npf_{674ef0de-0a02-47bd-8c41-d877518a39da}
+        symbol = ethernet_switch
+        x = 760.373808492
+        y = -164.8355698
+    [[ROUTER NottsALS01]]
+        model = 3640
+        console = 2026
+        aux = 2106
+        cnfg = configs\NottsALS01.cfg
+        slot0 = NM-16ESW
+        f0/0 = NottsDL3S01 f0/1
+        f0/1 = NottsDL3S02 f0/1
+        symbol = ethernet_switch
+        x = 749.060099992
+        y = -514.146319706
+[127.0.0.1:7200]
+    workingdir = working
+    udp = 12000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER BhamICMR01]]
+        model = 3640
+        console = 2006
+        aux = 2100
+        cnfg = configs\BhamICMR01.cfg
+        slot0 = NM-4T
+        s0/0 = ISPRouter s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = BhamEDL3S01 f0/3
+        slot2 = NM-1FE-TX
+        slot3 = NM-1FE-TX
+        x = -698.799856425
+        y = -289.614357138
+        hx = -20.6837661841
+        hy = -25.0
+    [[ETHSW BhamWMS02]]
+        1 = access 1 BhamWMR01 f2/0
+        2 = access 1 BhamWMR02 f2/0
+        3 = access 1 BhamWMR03 f2/0
+        4 = access 1 BhamEDL3S01 f0/2
+        x = -532.780087165
+        y = -214.901586978
+        hx = -18.4289321881
+        hy = -26.4142135624
+    [[ETHSW BhamWMS01]]
+        1 = access 1 BhamWMR01 f1/0
+        2 = access 1 BhamWMR02 f1/0
+        3 = access 1 BhamWMR03 f1/0
+        4 = access 1 BhamEDL3S01 f0/1
+        x = -528.60851429
+        y = -377.712770159
+        hx = -15.6005050634
+        hy = -30.6568542495
+    [[ROUTER BhamWMR03]]
+        model = 3640
+        console = 2002
+        aux = 2101
+        cnfg = configs\BhamWMR03.cfg
+        slot0 = NM-4T
+        s0/0 = LDNCLR01 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = BhamWMS01 3
+        slot2 = NM-1FE-TX
+        f2/0 = BhamWMS02 3
+        slot3 = NM-1FE-TX
+        x = -260.463853349
+        y = -171.580735804
+        hx = -28.5
+        hy = -23.5857864376
+    [[ROUTER BhamWMR02]]
+        model = 3640
+        console = 2001
+        aux = 2102
+        cnfg = configs\BhamWMR02.cfg
+        slot0 = NM-4T
+        s0/0 = MANCLR01 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = BhamWMS01 2
+        slot2 = NM-1FE-TX
+        f2/0 = BhamWMS02 2
+        slot3 = NM-1FE-TX
+        x = -259.534921162
+        y = -288.195959492
+        hx = -32.7426406871
+        hy = -23.5857864376
+    [[ROUTER BhamWMR01]]
+        model = 3640
+        console = 2000
+        aux = 2103
+        cnfg = configs\BhamWMR01.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = NottsCLR01 f0/0
+        slot1 = NM-1FE-TX
+        f1/0 = BhamWMS01 1
+        slot2 = NM-1FE-TX
+        f2/0 = BhamWMS02 1
+        slot3 = NM-1FE-TX
+        x = -260.640476858
+        y = -442.450793489
+        hx = -31.3284271247
+        hy = -23.5857864376
+[127.0.0.1:7212]
+    workingdir = working
+    udp = 13000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER LDNALS08]]
+        model = 3640
+        console = 2038
+        aux = 2112
+        cnfg = configs\LDNALS08.cfg
+        slot0 = NM-16ESW
+        f0/0 = LDNDL3S01 f0/8
+        f0/1 = LDNDL3S02 f0/8
+        symbol = ethernet_switch
+        x = 790.072293301
+        y = 375.394011027
+[127.0.0.1:7206]
+    workingdir = working
+    udp = 14000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        disk0 = 20
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER LDNDL3S01]]
+        model = 3640
+        console = 2015
+        aux = 2105
+        cnfg = configs\LDNDL3S01.cfg
+        slot0 = NM-16ESW
+        f0/0 = LDNCLR01 f1/0
+        f0/1 = LDNALS01 f0/0
+        f0/5 = LDNALS05 f0/0
+        f0/8 = LDNALS08 f0/0
+        slot1 = NM-1FE-TX
+        symbol = multilayer_switch
+        x = 557.783837972
+        y = 223.504617358
+        hx = -32.8284271247
+        hy = -23.5857864376
+    [[ROUTER LDNDL3S02]]
+        model = 3640
+        console = 2016
+        aux = 2106
+        cnfg = configs\LDNDL3S02.cfg
+        slot0 = NM-16ESW
+        f0/0 = LDNCLR01 f2/0
+        f0/1 = LDNALS01 f0/1
+        f0/5 = LDNALS05 f0/1
+        f0/8 = LDNALS08 f0/1
+        slot1 = NM-1FE-TX
+        symbol = multilayer_switch
+        x = 562.227488786
+        y = 364.592929113
+        hx = -33.1126983722
+        hy = -24.5147186258
+    [[ROUTER NottsDL3S02]]
+        model = 3640
+        console = 2053
+        aux = 2107
+        cnfg = configs\NottsDL3S02.cfg
+        slot0 = NM-16ESW
+        f0/0 = NottsCLR01 f2/0
+        f0/1 = NottsALS01 f0/1
+        f0/5 = NottsALS05 f0/1
+        f0/8 = NottsALS08 f0/1
+        slot1 = NM-1FE-TX
+        symbol = multilayer_switch
+        x = 529.856997825
+        y = -371.310749906
+[127.0.0.1:7207]
+    workingdir = working
+    udp = 15000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER BhamCCL3S02]]
+        model = 3640
+        console = 2017
+        aux = 2108
+        nvram = 184
+        disk0 = 32
+        disk1 = 16
+        cnfg = configs\BhamCCL3S02.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamEDL3S01 f0/5
+        f0/1 = BhamSFS01 f0/2
+        f0/2 = BhamSFS01 f0/3
+        f0/3 = BhamSFS02 f0/1
+        f0/4 = BhamALS01 f0/1
+        f0/5 = BhamALS02 f0/1
+        f0/6 = BhamALS03 f0/1
+        f0/10 = BhamALS07 f0/1
+        f0/11 = BhamALS08 f0/1
+        symbol = multilayer_switch
+        x = -516.66103833
+        y = 242.457936163
+    [[ROUTER BhamEDL3S01]]
+        model = 3640
+        console = 2027
+        aux = 2110
+        cnfg = configs\BhamEDL3S01.cfg
+        slot0 = NM-16ESW
+        f0/1 = BhamWMS01 4
+        f0/2 = BhamWMS02 4
+        f0/3 = BhamICMR01 f1/0
+        f0/4 = BhamCCL3S01 f0/0
+        f0/5 = BhamCCL3S02 f0/0
+        symbol = multilayer_switch
+        x = -609.999133448
+        y = 28.9116882453
+[127.0.0.1:7204]
+    workingdir = working
+    udp = 16000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R11]]
+        model = 3640
+        console = 2010
+        aux = 2109
+        symbol = multilayer_switch
+        x = 225.099638512
+        y = -812.112698372
+    [[ROUTER MANCLR01]]
+        model = 3640
+        console = 2033
+        aux = 2108
+        cnfg = configs\MANCLR01.cfg
+        slot0 = NM-4T
+        s0/0 = BhamWMR02 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = MANDL3S01 f0/0
+        slot2 = NM-1FE-TX
+        f2/0 = MANDL3S02 f0/0
+        slot3 = NM-1FE-TX
+        x = 309.800215363
+        y = -95.6993513614
+    [[ROUTER LDNCLR01]]
+        model = 3640
+        console = 2009
+        aux = 2110
+        cnfg = configs\LDNCLR01.cfg
+        slot0 = NM-4T
+        s0/0 = BhamWMR03 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = LDNDL3S01 f0/0
+        slot2 = NM-1FE-TX
+        f2/0 = LDNDL3S02 f0/0
+        slot3 = NM-1FE-TX
+        x = 316.607214463
+        y = 275.149278299
+        hx = -19.941125497
+        hy = -25.8284271247
+[127.0.0.1:7205]
+    workingdir = working
+    udp = 17000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        disk0 = 20
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER NottsCLR01]]
+        model = 3640
+        console = 2013
+        aux = 2114
+        disk0 = 0
+        cnfg = configs\NottsCLR01.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = BhamWMR01 f0/0
+        slot1 = NM-1FE-TX
+        f1/0 = NottsDL3S01 f0/0
+        slot2 = NM-1FE-TX
+        f2/0 = NottsDL3S02 f0/0
+        slot3 = NM-1FE-TX
+        x = 293.607214463
+        y = -437.078210487
+    [[ROUTER MANDL3S02]]
+        model = 3640
+        console = 2014
+        aux = 2112
+        cnfg = configs\MANDL3S02.cfg
+        slot0 = NM-16ESW
+        f0/0 = MANCLR01 f2/0
+        f0/1 = MANALS01 f0/1
+        f0/5 = MANALS05 f0/1
+        f0/8 = MANALS08 f0/1
+        slot1 = NM-1FE-TX
+        symbol = multilayer_switch
+        x = 558.577777211
+        y = -22.9806640164
+        hx = -42.3259018078
+        hy = -27.8284271247
+    [[ROUTER MANDL3S01]]
+        model = 3640
+        console = 2012
+        aux = 2113
+        cnfg = configs\MANDL3S01.cfg
+        slot0 = NM-16ESW
+        f0/0 = MANCLR01 f1/0
+        f0/1 = MANALS01 f0/0
+        f0/5 = MANALS05 f0/0
+        f0/8 = MANALS08 f0/0
+        slot1 = NM-1FE-TX
+        symbol = multilayer_switch
+        x = 557.234631461
+        y = -156.6425689
+    [[ROUTER NottsDL3S01]]
+        model = 3640
+        console = 2011
+        aux = 2115
+        cnfg = configs\NottsDL3S01.cfg
+        slot0 = NM-16ESW
+        f0/0 = NottsCLR01 f1/0
+        f0/1 = NottsALS01 f0/0
+        f0/5 = NottsALS05 f0/0
+        f0/8 = NottsALS08 f0/0
+        slot1 = NM-1FE-TX
+        symbol = multilayer_switch
+        x = 526.942350986
+        y = -499.661904884
+[127.0.0.1:7208]
+    workingdir = working
+    udp = 18000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        nvram = 200
+        disk0 = 20
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER BhamALS03]]
+        model = 3640
+        console = 2022
+        aux = 2118
+        cnfg = configs\BhamALS03.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamCCL3S01 f0/6
+        f0/1 = BhamCCL3S02 f0/6
+        symbol = ethernet_switch
+        x = -639.697618257
+        y = 482.874241767
+        hx = -12.0147186258
+        hy = -26.4142135624
+    [[ROUTER BhamALS07]]
+        model = 3640
+        console = 2020
+        aux = 2120
+        cnfg = configs\BhamALS07.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamCCL3S01 f0/10
+        f0/1 = BhamCCL3S02 f0/10
+        symbol = ethernet_switch
+        x = -424.737156777
+        y = 484.288455329
+        hx = -17.6715728753
+        hy = -26.4142135624
+    [[ROUTER BhamALS08]]
+        model = 3640
+        console = 2021
+        aux = 2121
+        cnfg = configs\BhamALS08.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamCCL3S01 f0/11
+        f0/1 = BhamCCL3S02 f0/11
+        symbol = ethernet_switch
+        x = -201.291413923
+        y = 481.460028204
+        hx = -16.2573593129
+        hy = -23.5857864377
+[127.0.0.1:7209]
+    workingdir = working
+    udp = 19000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        nvram = 172
+        disk0 = 16
+        disk1 = 12
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER BhamSFS02]]
+        model = 3640
+        console = 2035
+        aux = 2122
+        nvram = 196
+        disk0 = 20
+        disk1 = 0
+        cnfg = configs\BhamSFS02.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamCCL3S01 f0/3
+        f0/1 = BhamCCL3S02 f0/3
+        symbol = ethernet_switch
+        x = -870.214428924
+        y = -289.286363288
+        hx = -20.0
+        hy = -26.4142135624
+    [[ROUTER BhamSFS01]]
+        model = 3640
+        console = 2034
+        aux = 2123
+        nvram = 200
+        disk0 = 20
+        disk1 = 0
+        cnfg = configs\BhamSFS01.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamCCL3S01 f0/1
+        f0/1 = BhamCCL3S01 f0/2
+        f0/2 = BhamCCL3S02 f0/1
+        f0/3 = BhamCCL3S02 f0/2
+        symbol = ethernet_switch
+        x = -996.079435975
+        y = -289.286363288
+        hx = -24.2426406871
+        hy = -33.4852813742
+    [[ROUTER BhamALS02]]
+        model = 3640
+        console = 2023
+        aux = 2124
+        nvram = 200
+        disk0 = 20
+        disk1 = 0
+        cnfg = configs\BhamALS02.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamCCL3S01 f0/5
+        f0/1 = BhamCCL3S02 f0/5
+        symbol = ethernet_switch
+        x = -854.658079738
+        y = 480.045814642
+    [[ROUTER BhamALS01]]
+        model = 3640
+        console = 2024
+        aux = 2125
+        cnfg = configs\BhamALS01.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamCCL3S01 f0/4
+        f0/1 = BhamCCL3S02 f0/4
+        f0/2 = nio_gen_eth:\device\npf_{5ccf04a5-9e72-4179-b19a-a88db21d58f8}
+        symbol = ethernet_switch
+        x = -1027.19213435
+        y = 474.388960394
+[127.0.0.1:7213]
+    workingdir = working
+    udp = 20000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        nvram = 152
+        disk0 = 12
+        disk1 = 12
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER BhamCCL3S01]]
+        model = 3640
+        console = 2045
+        aux = 2134
+        cnfg = configs\BhamCCL3S01.cfg
+        slot0 = NM-16ESW
+        f0/0 = BhamEDL3S01 f0/4
+        f0/1 = BhamSFS01 f0/0
+        f0/2 = BhamSFS01 f0/1
+        f0/3 = BhamSFS02 f0/0
+        f0/4 = BhamALS01 f0/0
+        f0/5 = BhamALS02 f0/0
+        f0/6 = BhamALS03 f0/0
+        f0/10 = BhamALS07 f0/0
+        f0/11 = BhamALS08 f0/0
+        symbol = multilayer_switch
+        x = -704.751442126
+        y = 248.114790414
+[127.0.0.1:7214]
+    workingdir = working
+    udp = 21000
+    [[3640]]
+        image = /home/ehsan/Desktop/GNS3 - ISP\C3640-4-IK.BIN
+        idlepc = 0x60636b6c
+        ghostios = True
+        chassis = 3640
+    [[ROUTER ISPRouter]]
+        model = 3640
+        console = 2043
+        aux = 2134
+        cnfg = configs\ISPRouter.cfg
+        slot0 = NM-4T
+        s0/0 = BhamICMR01 s0/0
+        symbol = cloud
+        x = -739.657720801
+        y = -607.471354962
+        hx = 38.7010101267
+        hy = 13.1837661841
+[GNS3-DATA]
+    configs = configs
+    workdir = working
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = RIP
+        x = 558.614357137
+        y = 144.502092041
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 2]]
+        text = WAN Module
+        x = -414.364573776
+        y = -517.960028204
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 3]]
+        text = Edge Distribution
+        x = -673.16565569
+        y = -57.1274169979
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 4]]
+        text = ICM
+        x = -683.065150626
+        y = -519.575251894
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 5]]
+        text = SERVER FARM
+        x = -977.221571599
+        y = -522.604689145
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 6]]
+        text = OSPF Area 2
+        x = 571.342279197
+        y = -230.063491861
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 7]]
+        text = OSPF Area 1
+        x = 487.903679017
+        y = -579.17323164
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 8]]
+        text = OSPF Area 0
+        x = -690.136218438
+        y = -641.197618258
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[Cloud Workstation02]]
+        symbol = computer
+        x = 923.177415722
+        y = -175.007142675
+        connections = MANALS01:f0/2:nio_gen_eth:\device\npf_{674ef0de-0a02-47bd-8c41-d877518a39da}
+    [[Cloud Workstation01]]
+        symbol = computer
+        x = -1022.7804461
+        y = 558.969696196
+        connections = BhamALS01:f0/2:nio_gen_eth:\device\npf_{5ccf04a5-9e72-4179-b19a-a88db21d58f8}
+    [[SHAPE 1]]
+        type = rectangle
+        x = -1056.41753109
+        y = -610.940258945
+        width = 951.765727476
+        height = 1245.92214845
+        border_style = 4
+        z = -2.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = 247.085353162
+        y = 177.788888606
+        width = 660.839753881
+        height = 255.972654789
+        border_style = 4
+        z = -2.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = 248.700576851
+        y = -195.362481734
+        width = 785.089537243
+        height = 255.972654789
+        border_style = 4
+        z = -2.0
+    [[SHAPE 4]]
+        type = rectangle
+        x = 234.759451354
+        y = -547.300648638
+        width = 651.952452253
+        height = 255.972654789
+        border_style = 4
+        z = -2.0
+    [[SHAPE 5]]
+        type = rectangle
+        x = -1016.81955135
+        y = -489.518902708
+        width = 243.244732728
+        height = 398.607214462
+        border_style = 2
+        z = -2.0
+    [[SHAPE 6]]
+        type = rectangle
+        x = -675.994082814
+        y = -25.4558441227
+        width = 192.333044483
+        height = 185.261976671
+        border_style = 2
+        z = -2.0
+    [[SHAPE 7]]
+        type = rectangle
+        x = -551.543289325
+        y = -487.903679018
+        width = 408.707719526
+        height = 397.394011027
+        border_style = 2
+        z = -2.0
+    [[SHAPE 8]]
+        type = rectangle
+        x = -726.90577106
+        y = -489.31789258
+        width = 134.350288425
+        height = 398.607214462
+        border_style = 2
+        z = -2.0
